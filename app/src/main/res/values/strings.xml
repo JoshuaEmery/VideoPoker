@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VideoPoker</string>
+    <string name ="card_image">CardImage</string>
 </resources>
