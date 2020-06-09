@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActionBar;
 import android.content.pm.ActivityInfo;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     int[] cardImageIds;
@@ -17,9 +19,14 @@ public class MainActivity extends AppCompatActivity {
     Deck deck;
     Hand hand;
     Button btn;
+    Button btn2;
+    HandAnalyzer analyzer;
+    boolean[] held;
+    boolean[] result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        held = new boolean[5];
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_main);
@@ -27,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         setImageViews();
         setTextViews();
         setDeck();
-        setHand();
-        displayHand();
         setButton();
     }
 
@@ -154,10 +159,55 @@ public class MainActivity extends AppCompatActivity {
     private void setImageViews(){
         imageViews = new ImageView[5];
         imageViews[0] = findViewById(R.id.imgCard1);
+        imageViews[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(held[0])
+                    held[0] = false;
+                else
+                    held[0] = true;
+            }
+        });
         imageViews[1] = findViewById(R.id.imgCard2);
+        imageViews[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(held[1])
+                    held[1] = false;
+                else
+                    held[1] = true;
+            }
+        });
         imageViews[2] = findViewById(R.id.imgCard3);
+        imageViews[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(held[2])
+                    held[2] = false;
+                else
+                    held[2] = true;
+            }
+        });
         imageViews[3] = findViewById(R.id.imgCard4);
+        imageViews[3].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(held[3])
+                    held[3] = false;
+                else
+                    held[3] = true;
+            }
+        });
         imageViews[4] = findViewById(R.id.imgCard5);
+        imageViews[4].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(held[4])
+                    held[4] = false;
+                else
+                    held[4] = true;
+            }
+        });
     }
     private void setTextViews(){
         textViews = new TextView[5];
@@ -177,8 +227,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    private void setHand(){
+    private void newHand(){
         hand = new Hand(deck);
+        hand.drawCards();
+    }
+    private void drawCards(){
+        hand.setHeld(held);
         hand.drawCards();
     }
     private void displayHand(){
@@ -194,13 +248,41 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 setDeck();
-                setHand();
+                newHand();
                 displayHand();
+                analyzeHand();
+                displayAnalyzerResult();
             }
         });
+        btn2 = findViewById(R.id.btn2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawCards();
+                displayHand();
+                analyzeHand();
+                displayAnalyzerResult();
+            }
+        });
+    }
+    private void analyzeHand(){
+        analyzer = new HandAnalyzer(hand);
+        result = analyzer.analyzeHand();
+    }
+    private void displayAnalyzerResult(){
+        Resources res = getResources();
+        String[] pokerHands = res.getStringArray(R.array.poker_hands);
+        for (int i = pokerHands.length - 1; i >= 0; i--) {
+            if(result[i]){
+                Toast.makeText(getApplicationContext(), pokerHands[i],Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+        }
     }
     private void hideActionBar(){
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
     }
+
 }

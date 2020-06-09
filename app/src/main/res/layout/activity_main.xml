@@ -11,11 +11,13 @@
         android:layout_height="175dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/card_image"
+        android:clickable="true"
         app:layout_constraintEnd_toStartOf="@+id/imgCard2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ace_of_clubs" />
+        app:srcCompat="@drawable/ace_of_clubs"
+        android:focusable="true" />
 
     <ImageView
         android:id="@+id/imgCard2"
@@ -23,11 +25,13 @@
         android:layout_height="175dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/card_image"
+        android:clickable="true"
         app:layout_constraintEnd_toStartOf="@+id/imgCard3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgCard1"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ace_of_clubs" />
+        app:srcCompat="@drawable/ace_of_clubs"
+        android:focusable="true" />
 
     <ImageView
         android:id="@+id/imgCard3"
@@ -35,11 +39,13 @@
         android:layout_height="175dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/card_image"
+        android:clickable="true"
         app:layout_constraintEnd_toStartOf="@+id/imgCard4"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgCard2"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ace_of_clubs" />
+        app:srcCompat="@drawable/ace_of_clubs"
+        android:focusable="true" />
 
     <ImageView
         android:id="@+id/imgCard4"
@@ -47,11 +53,13 @@
         android:layout_height="175dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/card_image"
+        android:clickable="true"
         app:layout_constraintEnd_toStartOf="@+id/imgCard5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgCard3"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ace_of_clubs" />
+        app:srcCompat="@drawable/ace_of_clubs"
+        android:focusable="true" />
 
     <ImageView
         android:id="@+id/imgCard5"
@@ -59,11 +67,13 @@
         android:layout_height="175dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/card_image"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgCard4"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ace_of_clubs" />
+        app:srcCompat="@drawable/ace_of_clubs"
+        android:focusable="true" />
 
     <TextView
         android:id="@+id/txtCard1"
@@ -124,5 +134,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCard3" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDraw"
+        app:layout_constraintTop_toBottomOf="@+id/txtCard4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

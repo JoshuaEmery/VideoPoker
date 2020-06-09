@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">VideoPoker</string>
     <string name ="card_image">CardImage</string>
+    <string-array name="poker_hands">
+        <item>Pair</item>
+        <item>Jacks or Better</item>
+        <item>Two Pairs</item>
+        <item>Three of a Kind</item>
+        <item>Straight</item>
+        <item>Flush</item>
+        <item>Full House</item>
+        <item>Four of a Kind</item>
+        <item>Straight Flush</item>
+        <item>Royal Flush</item>
+    </string-array>
 </resources>
