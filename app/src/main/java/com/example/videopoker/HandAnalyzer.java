@@ -16,14 +16,15 @@ public class HandAnalyzer {
     }
 
     public boolean[] analyzeHand() {
-        pairAnalyzer();
-        if (!handScore[0]) {
+        //if pairanalyzer returns false, check for straight or flush hands
+        if (!pairAnalyzer()) {
             straightFlushAnalyzer();
         }
         return handScore;
     }
-
-    public void pairAnalyzer() {
+    //method which updates the handScore array and returns true if any pair related
+    //hand was found
+    public boolean pairAnalyzer() {
         for (int i = 0; i < cards.length; i++) {
             Card card = cards[i];
             int count = frequency.containsKey(card.getValue()) ? frequency.get(card.getValue()) : 0;
@@ -31,25 +32,26 @@ public class HandAnalyzer {
         }
         switch (frequency.size()) {
             case 5:
-                return;
+                return false;
             case 4:
                 handScore[0] = true;
                 if (checkPairJacks())
                     handScore[1] = true;
-                return;
+                return true;
             case 3:
                 if (checkThreeKind())
                     handScore[3] = true;
                 else
                     handScore[2] = true;
-                return;
+                return true;
             case 2:
                 if (checkFourKind())
                     handScore[7] = true;
                 else
                     handScore[6] = true;
-                return;
+                return true;
         }
+        return false;
     }
 
     public void straightFlushAnalyzer() {
