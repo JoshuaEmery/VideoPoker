@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">VideoPoker</string>
     <string name ="card_image">CardImage</string>
+    <string name="held">Held</string>
     <string-array name="poker_hands">
         <item>Pair</item>
         <item>Jacks or Better</item>

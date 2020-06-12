@@ -3,79 +3,90 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
 
     <ImageView
         android:id="@+id/imgCard1"
-        android:layout_width="120dp"
-        android:layout_height="175dp"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="@string/card_image"
+        android:background="@android:color/holo_orange_light"
         android:clickable="true"
+        android:contentDescription="@string/card_image"
+        android:padding="3dp"
         app:layout_constraintEnd_toStartOf="@+id/imgCard2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ace_of_clubs" />
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        app:srcCompat="@drawable/cardback5" />
 
     <ImageView
         android:id="@+id/imgCard2"
-        android:layout_width="120dp"
-        android:layout_height="175dp"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="@string/card_image"
+        android:background="@android:color/holo_orange_light"
         android:clickable="true"
+        android:contentDescription="@string/card_image"
+        android:padding="3dp"
         app:layout_constraintEnd_toStartOf="@+id/imgCard3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgCard1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ace_of_clubs" />
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        app:srcCompat="@drawable/cardback5" />
 
     <ImageView
         android:id="@+id/imgCard3"
-        android:layout_width="120dp"
-        android:layout_height="175dp"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="@string/card_image"
+        android:background="@android:color/holo_orange_light"
         android:clickable="true"
+        android:contentDescription="@string/card_image"
+        android:padding="3dp"
         app:layout_constraintEnd_toStartOf="@+id/imgCard4"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgCard2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ace_of_clubs" />
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        app:srcCompat="@drawable/cardback5" />
 
     <ImageView
         android:id="@+id/imgCard4"
-        android:layout_width="120dp"
-        android:layout_height="175dp"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="@string/card_image"
+        android:background="@android:color/holo_orange_light"
         android:clickable="true"
+        android:contentDescription="@string/card_image"
+        android:padding="3dp"
         app:layout_constraintEnd_toStartOf="@+id/imgCard5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgCard3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ace_of_clubs" />
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        app:srcCompat="@drawable/cardback5" />
 
     <ImageView
         android:id="@+id/imgCard5"
-        android:layout_width="120dp"
-        android:layout_height="175dp"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="@string/card_image"
+        android:background="@android:color/holo_orange_light"
         android:clickable="true"
+        android:contentDescription="@string/card_image"
+        android:padding="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgCard4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ace_of_clubs" />
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        app:srcCompat="@drawable/cardback5" />
 
     <TextView
         android:id="@+id/txtCard1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:textColor="#FFEB3B"
         app:layout_constraintEnd_toEndOf="@+id/imgCard1"
         app:layout_constraintStart_toStartOf="@+id/imgCard1"
         app:layout_constraintTop_toBottomOf="@+id/imgCard1" />
@@ -85,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:textColor="#FFEB3B"
         app:layout_constraintEnd_toEndOf="@+id/imgCard2"
         app:layout_constraintStart_toStartOf="@+id/imgCard2"
         app:layout_constraintTop_toBottomOf="@+id/imgCard2" />
@@ -95,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:textColor="#FFEB3B"
         app:layout_constraintEnd_toEndOf="@+id/imgCard3"
         app:layout_constraintStart_toStartOf="@+id/imgCard3"
         app:layout_constraintTop_toBottomOf="@+id/imgCard3" />
@@ -105,7 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:textColor="#FFEB3B"
         app:layout_constraintEnd_toEndOf="@+id/imgCard4"
         app:layout_constraintStart_toStartOf="@+id/imgCard4"
         app:layout_constraintTop_toBottomOf="@+id/imgCard4" />
@@ -115,29 +126,124 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:textColor="#FFEB3B"
         app:layout_constraintEnd_toEndOf="@+id/imgCard5"
         app:layout_constraintStart_toStartOf="@+id/imgCard5"
         app:layout_constraintTop_toBottomOf="@+id/imgCard5" />
 
     <Button
-        android:id="@+id/btnDraw"
+        android:id="@+id/btnNew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="New Game"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCard3" />
 
     <Button
-        android:id="@+id/btn2"
+        android:id="@+id/btnDraw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Draw Cards"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnDraw"
+        app:layout_constraintStart_toEndOf="@+id/btnNew"
         app:layout_constraintTop_toBottomOf="@+id/txtCard4" />
+
+    <TextView
+        android:id="@+id/txtHeld1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/held"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCard1"
+        app:layout_constraintEnd_toEndOf="@+id/imgCard1"
+        app:layout_constraintStart_toStartOf="@+id/imgCard1"
+        app:layout_constraintTop_toTopOf="@+id/imgCard1" />
+
+    <TextView
+        android:id="@+id/txtHeld2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/held"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCard2"
+        app:layout_constraintEnd_toEndOf="@+id/imgCard2"
+        app:layout_constraintStart_toStartOf="@+id/imgCard2"
+        app:layout_constraintTop_toTopOf="@+id/imgCard2" />
+
+    <TextView
+        android:id="@+id/txtHeld3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/held"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCard3"
+        app:layout_constraintEnd_toEndOf="@+id/imgCard3"
+        app:layout_constraintStart_toStartOf="@+id/imgCard3"
+        app:layout_constraintTop_toTopOf="@+id/imgCard3" />
+
+    <TextView
+        android:id="@+id/txtHeld4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/held"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCard4"
+        app:layout_constraintEnd_toEndOf="@+id/imgCard4"
+        app:layout_constraintStart_toStartOf="@+id/imgCard4"
+        app:layout_constraintTop_toTopOf="@+id/imgCard4" />
+
+    <TextView
+        android:id="@+id/txtHeld5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/held"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCard5"
+        app:layout_constraintEnd_toEndOf="@+id/imgCard5"
+        app:layout_constraintStart_toStartOf="@+id/imgCard5"
+        app:layout_constraintTop_toTopOf="@+id/imgCard5" />
+
+    <TextView
+        android:id="@+id/txtBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNew"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNew" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
